@@ -166,6 +166,8 @@ public class LotsOMobs
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		 FMLCommonHandler.instance().bus().register(new LotsOMobsConfigEvent());
+		
      LotsOMobsBlocks.Init();
      LotsOMobsItems.Init();
      LotsOMobsBiomes.Init();
@@ -180,9 +182,7 @@ public class LotsOMobs
 	@EventHandler
 	public void load(FMLInitializationEvent event)
 	{	
-     	FMLCommonHandler.instance().bus().register(new LotsOMobsConfigEvent());
-
-		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+     		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		LotsOMobsMobs.Init();
 		LotsOMobsRecipes.RecipeBook();		
      	
