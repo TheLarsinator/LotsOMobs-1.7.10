@@ -9,8 +9,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
 import com.lom.lotsomobsbiomes.BiomeGenIcePlains;
-import com.lom.lotsomobscore.ConfigDetails;
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
 import cpw.mods.fml.common.IWorldGenerator;
@@ -33,11 +32,11 @@ else if(world.provider.dimensionId == 1)
 {
 	generateEnd();
 }
-else if(world.provider.dimensionId == ConfigDetails.dimension)
+else if(world.provider.dimensionId == ConfigHandler.dimension)
 {
 	generateDinoAge(world, random, chunkX*16, chunkZ*16);
 }
-else if(world.provider.dimensionId == ConfigDetails.dimension2)
+else if(world.provider.dimensionId == ConfigHandler.dimension2)
 {
 	generateIceAge(world, random, chunkX*16, chunkZ*16);
 }

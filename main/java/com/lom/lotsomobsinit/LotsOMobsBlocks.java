@@ -24,7 +24,6 @@ import com.lom.lotsomobsblocks.BlockSaltBath;
 import com.lom.lotsomobsblocks.BlockSaltOre;
 import com.lom.lotsomobsblocks.BlockSpinningWheel;
 import com.lom.lotsomobsblocks.BlockTanningRack;
-import com.lom.lotsomobscore.ConfigDetails;
 import com.lom.lotsomobscore.LotsOMobs;
 import com.lom.lotsomobscrops.BlockPineApple;
 import com.lom.lotsomobscrops.BlockTomato;

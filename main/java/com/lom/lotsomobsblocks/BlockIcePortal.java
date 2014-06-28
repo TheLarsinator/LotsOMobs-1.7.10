@@ -18,8 +18,8 @@ import net.minecraft.util.Direction;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import com.lom.lotsomobscore.ConfigDetails;
 import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobsiceage.TeleporterIceAge;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
 
@@ -183,9 +183,9 @@ public class BlockIcePortal extends BlockBreakable
          if (par5Entity instanceof EntityPlayerMP)
          {
           EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
-          if (par5Entity.dimension != ConfigDetails.dimension2)
+          if (par5Entity.dimension != ConfigHandler.dimension2)
           {
-           thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigDetails.dimension2, new TeleporterIceAge(thePlayer.mcServer.worldServerForDimension(ConfigDetails.dimension2)));
+           thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigHandler.dimension2, new TeleporterIceAge(thePlayer.mcServer.worldServerForDimension(ConfigHandler.dimension2)));
           }
           else
           {

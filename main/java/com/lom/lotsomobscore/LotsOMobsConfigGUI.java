@@ -1,5 +1,7 @@
 package com.lom.lotsomobscore;
 
+import com.lom.lotsomobscore.handler.ConfigHandler;
+
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
@@ -9,6 +11,8 @@ public class LotsOMobsConfigGUI extends GuiConfig
 {
     public LotsOMobsConfigGUI(GuiScreen parent) 
     {
-        super(parent, new ConfigElement(LotsOMobs.config.getCategory("mobs")).getChildElements(), "LotsOMobs", false, false, GuiConfig.getAbridgedConfigPath(LotsOMobs.config.toString()));
+        super(parent,
+        		new ConfigElement(ConfigHandler.config.getCategory("mobs")).getChildElements(),
+        		"lom", false, false, "LotsOMobs Config", GuiConfig.getAbridgedConfigPath(ConfigHandler.config.toString()));
     }
 }

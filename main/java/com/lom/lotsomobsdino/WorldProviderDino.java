@@ -7,7 +7,7 @@ import net.minecraft.world.WorldProvider;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.DimensionManager;
 
-import com.lom.lotsomobscore.ConfigDetails;
+import com.lom.lotsomobscore.handler.ConfigHandler;
 
 public class WorldProviderDino extends WorldProvider
 {
@@ -28,7 +28,7 @@ return "DinoWorld";
 /** Get Provider for dimension **/
 public static WorldProvider getProviderForDimension(int id)
 {
-return DimensionManager.createProviderFor(ConfigDetails.dimension);
+return DimensionManager.createProviderFor(ConfigHandler.dimension);
 }
 
 /** Welcome message **/
