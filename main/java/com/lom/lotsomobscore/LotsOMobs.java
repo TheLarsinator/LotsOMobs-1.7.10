@@ -74,6 +74,7 @@ public class LotsOMobs
 	{
 		config = new Configuration(event.getSuggestedConfigurationFile());	
 		//config.load();
+		System.out.println("Im called, yes");
 		syncConfig();
 	}
 	
@@ -166,6 +167,8 @@ public class LotsOMobs
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{    
+	 this.initConfiguration(event);
+
      LotsOMobsBlocks.Init();
      LotsOMobsItems.Init();
      LotsOMobsBiomes.Init();
