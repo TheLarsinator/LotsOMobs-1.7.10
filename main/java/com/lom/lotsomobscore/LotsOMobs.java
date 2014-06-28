@@ -166,6 +166,9 @@ public class LotsOMobs
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+	 FMLCommonHandler.instance().bus().register(new LotsOMobsConfigEvent());
+     MinecraftForge.EVENT_BUS.register(new LotsOMobsConfigEvent());
+     
      LotsOMobsBlocks.Init();
      LotsOMobsItems.Init();
      LotsOMobsBiomes.Init();
@@ -198,7 +201,6 @@ public class LotsOMobs
 
      	MinecraftForge.EVENT_BUS.register(new LotsOMobsAchievements());
      	FMLCommonHandler.instance().bus().register(new LotsOMobsAchievements());
-     	FMLCommonHandler.instance().bus().register(new LotsOMobsConfigEvent());
-     	MinecraftForge.EVENT_BUS.register(new LotsOMobsConfigEvent());
+
 	}
 }
