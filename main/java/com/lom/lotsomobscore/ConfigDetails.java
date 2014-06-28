@@ -13,7 +13,6 @@ public class ConfigDetails
 	public static int MammothID = 115;
 	public static int SaberToothID = 116;
 	public static int IchtyosaurusID = 117;
-
 	
 	//All Mobs On/Off
 	public static boolean DeerOn = true;
@@ -80,8 +79,4 @@ public class ConfigDetails
 	public static int DinoTerrainID = 42;
 	public static int IceAgeTerrainID = 46;
 	public static int TropicBeachID = 50;
-
-
-
-
 }

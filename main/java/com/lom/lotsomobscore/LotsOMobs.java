@@ -179,9 +179,7 @@ public class LotsOMobs
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event)
-	{	
-     	FMLCommonHandler.instance().bus().register(new LotsOMobsConfigEvent());
-
+	{	     	
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		LotsOMobsMobs.Init();
 		LotsOMobsRecipes.RecipeBook();		
@@ -200,6 +198,7 @@ public class LotsOMobs
 
      	MinecraftForge.EVENT_BUS.register(new LotsOMobsAchievements());
      	FMLCommonHandler.instance().bus().register(new LotsOMobsAchievements());
-
+     	FMLCommonHandler.instance().bus().register(new LotsOMobsConfigEvent());
+     	MinecraftForge.EVENT_BUS.register(new LotsOMobsConfigEvent());
 	}
 }
