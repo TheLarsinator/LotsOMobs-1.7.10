@@ -2,13 +2,11 @@ package com.lom.lotsomobsachievement;
 
 import net.minecraftforge.event.world.BlockEvent;
 
-import com.lom.lotsomobscore.ConfigDetails;
-import com.lom.lotsomobscore.LotsOMobs;
+import com.lom.lotsomobscore.handler.ConfigHandler;
 import com.lom.lotsomobsinit.LotsOMobsAchievementsBook;
 import com.lom.lotsomobsinit.LotsOMobsBlocks;
 import com.lom.lotsomobsinit.LotsOMobsItems;
 
-import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 
@@ -64,16 +62,17 @@ public class LotsOMobsAchievements
 	public void OnLogIn(PlayerEvent.PlayerLoggedInEvent event)
 	{
 		event.player.addStat(LotsOMobsAchievementsBook.AchievementLogIn, 1);
+		
 	}
 	
 	@SubscribeEvent
 	public void OnTeleport(PlayerEvent.PlayerChangedDimensionEvent event)
 	{
-		if(event.toDim == ConfigDetails.dimension)
+		if(event.toDim == ConfigHandler.dimension)
 		{
 			event.player.addStat(LotsOMobsAchievementsBook.AchievementDino, 1);
 		}
-		else if(event.toDim == ConfigDetails.dimension2)
+		else if(event.toDim == ConfigHandler.dimension2)
 		{
 			event.player.addStat(LotsOMobsAchievementsBook.AchievementIceAge, 1);
 		}

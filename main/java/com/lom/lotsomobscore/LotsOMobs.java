@@ -36,7 +36,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod (modid = "lom", name = "LotsOMobs", version = "version", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
+@Mod (modid = "lom", name = "LotsOMobs", version = "1.7.10-202.1.5", guiFactory = "com.lom.lotsomobscore.LotsOMobsGUIFactory")
 /**100.000 downloads!!!
  * http://prntscr.com/1hz9gd
  * http://prntscr.com/1hzais
@@ -82,7 +82,7 @@ public class LotsOMobs
 
 	     GameRegistry.registerWorldGenerator(new FossilOreGeneration(), 2);
 	     GameRegistry.registerWorldGenerator(new OreGeneration(), 2);
-			// proxy.registerSound();		
+		// proxy.registerSound();
 		}
 
 	@EventHandler

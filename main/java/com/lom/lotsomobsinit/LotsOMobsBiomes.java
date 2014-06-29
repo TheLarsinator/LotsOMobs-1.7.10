@@ -50,7 +50,8 @@ public class LotsOMobsBiomes
 		 modBiomeIceOcean = new BiomeGenIceOcean(ConfigHandler.IceAgeTerrainID+3).setColor(6546587).setBiomeName("Ice Ocean");
 		 modBiomeIceIslands = new BiomeGenIceIslands(ConfigHandler.IceAgeTerrainID+4).setColor(6546587).setBiomeName("Ice Islands");
 
-		 BiomeManager.icyBiomes.add(new BiomeEntry(modBiomeAntartica, 10));
+		 BiomeManager.icyBiomes.add(new BiomeEntry(modBiomeAntartica, 300));
+		 BiomeManager.coolBiomes.add(new BiomeEntry(modBiomeAntartica, 100));
 		 BiomeManager.oceanBiomes.add(modBiomeArcticOcean);
 		 
 		 BiomeManager.addSpawnBiome(modBiomeAntartica);

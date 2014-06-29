@@ -155,23 +155,23 @@ public class ConfigHandler
 		IchtyosaurusOn = config.getBoolean("Ichtyosaurus", "mobs", IchtyosaurusOn, "Turn the Ichtyosaurus on/off");	
 		GazelleOn = config.getBoolean("Gazelle", "mobs", GazelleOn, "Turn the Gazelle on/off");	
 	
-		IchtyosaurusID = config.getInt("IchtyosaurusID", "mobs", IchtyosaurusID, 0, Integer.MAX_VALUE, "Ichtyosaurus ID");
-		TriceratopsID = config.getInt("TriceratopsID", "mobs", TriceratopsID, 0, Integer.MAX_VALUE, "Triceratops ID");
-		BrontosaurusID = config.getInt("BrontosaurusID", "mobs", BrontosaurusID, 0, Integer.MAX_VALUE, "Brontosaurus ID");
-		RaptorID = config.getInt("RaptorID", "mobs", RaptorID, 0, Integer.MAX_VALUE, "Raptor ID");
-		TRexID = config.getInt("TRexID", "mobs", TRexID, 0, Integer.MAX_VALUE, "TRex ID");
-		PterosaurusID = config.getInt("PterosaurusID", "mobs", PterosaurusID, 0, Integer.MAX_VALUE, "Pterosaurus ID");
-		MammothID = config.getInt("MammothID", "mobs", MammothID, 0, Integer.MAX_VALUE, "Mammoth ID");
-		SaberToothID = config.getInt("SaberToothID", "mobs", SaberToothID, 0, Integer.MAX_VALUE, "SaberTooth ID");
+		IchtyosaurusID = config.getInt("IchtyosaurusID", "dinoid", IchtyosaurusID, 0, Integer.MAX_VALUE, "Ichtyosaurus ID");
+		TriceratopsID = config.getInt("TriceratopsID", "dinoid", TriceratopsID, 0, Integer.MAX_VALUE, "Triceratops ID");
+		BrontosaurusID = config.getInt("BrontosaurusID", "dinoid", BrontosaurusID, 0, Integer.MAX_VALUE, "Brontosaurus ID");
+		RaptorID = config.getInt("RaptorID", "dinoid", RaptorID, 0, Integer.MAX_VALUE, "Raptor ID");
+		TRexID = config.getInt("TRexID", "dinoid", TRexID, 0, Integer.MAX_VALUE, "TRex ID");
+		PterosaurusID = config.getInt("PterosaurusID", "dinoid", PterosaurusID, 0, Integer.MAX_VALUE, "Pterosaurus ID");
+		MammothID = config.getInt("MammothID", "dinoid", MammothID, 0, Integer.MAX_VALUE, "Mammoth ID");
+		SaberToothID = config.getInt("SaberToothID", "dinoid", SaberToothID, 0, Integer.MAX_VALUE, "SaberTooth ID");
 
-		AntarticaID = config.getInt("AntarticaID", "mobs", AntarticaID, 0, Integer.MAX_VALUE, "Antartica ID");
-		ArcticOceanID = config.getInt("ArcticOceanID", "mobs", ArcticOceanID, 0, Integer.MAX_VALUE, "ArcticOcean ID");
-		DinoTerrainID = config.getInt("DinoTerrainID", "mobs", DinoTerrainID, 0, Integer.MAX_VALUE, "DinoTerrain ID, remember to keep the next 3 IDs "
+		AntarticaID = config.getInt("AntarticaID", "biome", AntarticaID, 0, Integer.MAX_VALUE, "Antartica ID");
+		ArcticOceanID = config.getInt("ArcticOceanID", "biome", ArcticOceanID, 0, Integer.MAX_VALUE, "ArcticOcean ID");
+		DinoTerrainID = config.getInt("DinoTerrainID", "biome", DinoTerrainID, 0, Integer.MAX_VALUE, "DinoTerrain ID, remember to keep the next 3 IDs "
 				+ "empty as well since LotsOMobs adds 4 Dino Biomes");
-		IceAgeTerrainID = config.getInt("IceAgeTerrainID", "mobs", IceAgeTerrainID, 0, Integer.MAX_VALUE, "IceAgeTerrain ID, also keep 3 IDs empty after this one");
+		IceAgeTerrainID = config.getInt("IceAgeTerrainID", "biome", IceAgeTerrainID, 0, Integer.MAX_VALUE, "IceAgeTerrain ID, also keep 3 IDs empty after this one");
 
-		dimension = config.getInt("Dino Dimension ID", "mobs", dimension, -100, Integer.MAX_VALUE, "Dino ID");
-		dimension2 = config.getInt("Ice Dimension ID", "mobs", dimension2, -100, Integer.MAX_VALUE, "Ice Age ID");
+		dimension = config.getInt("Dino Dimension ID", "dimension", dimension, -100, Integer.MAX_VALUE, "Dino ID");
+		dimension2 = config.getInt("Ice Dimension ID", "dimension", dimension2, -100, Integer.MAX_VALUE, "Ice Age ID");
 
 		
 		if(config.hasChanged())	
