@@ -26,6 +26,7 @@ public class LotsOMobsConfigGUI extends GuiConfig
     {
         List<IConfigElement> list = new ArrayList<IConfigElement>();
         list.add(new DummyCategoryElement("LotsOMobs Mobs", "LotsOMobsMobs", LotsOMobsMobConfig.class));
+        list.add(new DummyCategoryElement("LotsOMobs Mob Spawn Rates", "LotsOMobsSpawnRates", LotsOMobsSpawnConfig.class));
         list.add(new DummyCategoryElement("LotsOMobs Dino IDs", "LotsOMobsDinos", LotsOMobsDinoConfig.class));        
         list.add(new DummyCategoryElement("LotsOMobs Biome IDs", "LotsOMobsBiomes", LotsOMobsBiomeConfig.class));
         list.add(new DummyCategoryElement("LotsOMobs Dimension IDs", "LotsOMobsDimensions", LotsOMobsDimensionConfig.class));
@@ -97,6 +98,22 @@ public class LotsOMobsConfigGUI extends GuiConfig
             // GuiConfig object's entryList will also be refreshed to reflect the changes.
             return new GuiConfig(this.owningScreen, 
                     new ConfigElement(ConfigHandler.config.getCategory("dimension")).getChildElements(), "lom", false, false, "LotsOMobs Config", GuiConfig.getAbridgedConfigPath(ConfigHandler.config.toString()));
+        }
+    }
+    public static class LotsOMobsSpawnConfig extends CategoryEntry
+    {
+        public LotsOMobsSpawnConfig(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement prop)
+        {
+            super(owningScreen, owningEntryList, prop);
+        }
+        
+        @Override
+        protected GuiScreen buildChildScreen()
+        {
+            // This GuiConfig object specifies the configID of the object and as such will force-save when it is closed. The parent
+            // GuiConfig object's entryList will also be refreshed to reflect the changes.
+            return new GuiConfig(this.owningScreen, 
+                    new ConfigElement(ConfigHandler.config.getCategory("spawn")).getChildElements(), "lom", false, false, "LotsOMobs Config", GuiConfig.getAbridgedConfigPath(ConfigHandler.config.toString()));
         }
     }
 }

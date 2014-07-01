@@ -244,3 +244,4 @@ LotsOMobsMobs.tooltip=Add/remove mobs from the mod. Requires restart!
 LotsOMobsDinos.tooltip=Change Dinosaur Entity IDs. Requires restart!
 LotsOMobsBiomes.tooltip=Change Biome IDs. Requires restart!
 LotsOMobsDimensions.tooltip=Change Dimension IDs. Requires restart!
+LotsOMobsSpawnRates.tooltip=Change the Mob spawn rates. Requires restart!
